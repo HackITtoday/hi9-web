@@ -16,7 +16,7 @@
     console.log('Our app is ready to rock!');
     
     var user = this.user();
-    var userID = 'user-id';
+    var userID = user.uid;
 
     var properties = {
       id: userID,
