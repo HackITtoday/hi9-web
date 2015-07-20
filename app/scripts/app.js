@@ -33,6 +33,10 @@
   };
 
   app.properties = {
+      user: {
+        type :Object,
+        value: {google : {displayName: "you"}}
+      },
       observer: 'userUpdate(user)'
   }
   // See https://github.com/Polymer/polymer/issues/1381
