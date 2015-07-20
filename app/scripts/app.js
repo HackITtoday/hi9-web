@@ -14,6 +14,19 @@
   // have resolved and content has been stamped to the page
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
+    
+    var user = this.user();
+    var userID = 'user-id';
+
+    var properties = {
+      id: userID,
+      name: 'User Name',
+      email: 'user@email.com',
+      other: user
+      // other properties ...
+    };
+
+    _gs('identify', userID, properties);
   });
 
   // See https://github.com/Polymer/polymer/issues/1381
