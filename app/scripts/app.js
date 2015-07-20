@@ -15,7 +15,7 @@
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
     
-    var user = this.user();
+    var user = this.user;
     var userID = user.uid;
 
     var properties = {
