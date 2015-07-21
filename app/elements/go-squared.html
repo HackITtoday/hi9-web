@@ -22,17 +22,19 @@ Polymer({
     _gs(id);
   },
   userUpdate: function(user) {
-    var user = this.user;
-    var userID = user.uid;
-    console.log(user);
-    var properties = {
-      id: userID,
-      name: 'User Name', //todo
-      email: 'user@gmail.com',
-      other: user
-      // other properties ...
-    };
-    _gs('identify', userID, properties);
+    if (user !== null) {
+      var user = this.user;
+      var userID = user.uid;
+      console.log(user);
+      var properties = {
+        id: userID,
+        name: 'marcus Name', //todo
+        email: 'user@gmail.com',
+        other: user
+        // other properties ...
+      };
+      _gs('identify', userID, properties);
+    }
   }
 });
 </script>
