@@ -15,30 +15,7 @@
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
   });
-    
-  app.userUpdate = function (user) {
-    var user = this.user;
-    var userID = user.uid;
-
-    var properties = {
-      id: userID,
-      name: 'User Name',
-      email: 'user@email.com',
-      other: user
-      // other properties ...
-    };
-
-    _gs('identify', userID, properties);
-    
-  };
-
-  app.properties = {
-      user: {
-        type :Object,
-        value: {google : {displayName: "you"}}
-      },
-      observer: 'userUpdate(user)'
-  }
+  
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
