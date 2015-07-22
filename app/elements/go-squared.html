@@ -13,28 +13,39 @@ Polymer({
     }
   },
   ready: function () {
-    !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-    arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-    d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-    insertBefore(d,q)}(window,document,'script','_gs');
+    window.setTimeout(function() {
+      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+      insertBefore(d,q)}(window,document,'script','_gs');
+    }
+    ,1000);
   },
   init: function (id) {
-    _gs(id);
+    window.setTimeout(function() {
+      _gs('GSN-963825-Q');
+    },2000);
   },
   userUpdate: function(user) {
-    if (user !== null) {
-      var user = this.user;
-      var userID = user.uid;
-      console.log(user);
-      var properties = {
-        id: userID,
-        name: 'marcus Name', //todo
-        email: 'user@gmail.com',
-        other: user
-        // other properties ...
-      };
-      _gs('identify', userID, properties);
-    }
+    window.setTimeout(function() {
+      var app = document.querySelectorAll('html go-squared');
+      if (app.length > 0) {
+        var user =  app[0].user;
+      
+        if (user !== null) {
+          var user = this.user;
+          var userID = user.uid;
+          console.log(user);
+          var properties = {
+            id: userID,
+            name: 'marcus Name', //todo
+            email: 'user@gmail.com',
+            other: user
+          };
+          _gs('identify', userID, properties);
+        }
+      }
+    },3000)
   }
 });
 </script>
