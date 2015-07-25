@@ -8,7 +8,7 @@
 <template>
   <!-- local DOM for your element -->
 
-  <section>
+  <section is=dom-bind>
     <h1>White List of Sites That We Track</h1>
 
     <article> 
@@ -21,8 +21,9 @@
     </article>
   </section>
 	
-  
-
+  <google-sheets>
+    key="1knH1i3Ryfz7xDd4pE4F_HFlsh6IhaVOLjD1Q8iD7WXY" tab-id="1" rows="{{rows}}">
+  </google-sheets>
 </template>
 
 </dom-module>
