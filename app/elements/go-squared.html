@@ -37,8 +37,7 @@ Polymer({
           console.log(user);
           var properties = {
             id: userID,
-            name: 'marcus',
-            email: 'marcus7777@testing.com',
+            name: user.google.displayName,
             other: user
           };
           _gs('identify', userID, properties);
