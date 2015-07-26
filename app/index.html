@@ -73,6 +73,13 @@
         <iron-icon icon="info"></iron-icon>
         <span>Privacy Promise</span>
       </a>
+      <template is="dom-if" if="{{!show_model}}">
+        <a data-route="user" href="/user">
+          <iron-icon icon="info"></iron-icon>
+          <span>Account</span>
+        </a>
+      </template>
+
 
       <a data-route="contact" href="/contact">
         <iron-icon icon="mail"></iron-icon>
@@ -89,7 +96,7 @@
 
     <!-- Toolbar icons -->
 
-    <hi9-login user={{user}}></hi9-login>
+    <hi9-login show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
     <!-- Application name -->
     <div class="middle paper-font-display2 app-name">Hi9</div>
@@ -113,6 +120,12 @@
       <section data-route="privacy">
         <paper-material elevation="1">
         <privacy-page></privacy-page>
+        </paper-material>
+      </section>      
+      
+      <section data-route="user">
+        <paper-material elevation="1">
+        <user-page></user-page>
         </paper-material>
       </section>
 
