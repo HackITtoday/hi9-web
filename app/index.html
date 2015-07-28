@@ -50,7 +50,7 @@
 
 </head>
 
-<body unresolved class="fullbleed layout vertical">
+<body unresolved class="fullbleed layout vertical" style="overflow: hidden;">
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
 
@@ -71,7 +71,7 @@
 
       <a data-route="privacy" href="/privacy">
         <iron-icon icon="info"></iron-icon>
-        <span>Privacy Promise</span>
+        <span>Privacy</span>
       </a>
       <template is="dom-if" if="{{!show_model}}">
         <a data-route="user" href="/user">
@@ -84,6 +84,11 @@
       <a data-route="contact" href="/contact">
         <iron-icon icon="mail"></iron-icon>
         <span>Contact</span>
+      </a>
+		  
+	   <a data-route="whitelist" href="/whitelist">
+        <iron-icon icon="bookmark"></iron-icon>
+        <span>White List</span>
       </a>
       </paper-menu>
     </div>
@@ -103,9 +108,10 @@
 
     <!-- Application sub title -->
     <div class="bottom title"></div>
-
+	
     </paper-toolbar>
-
+	<paper-progress></paper-progress>
+	
     <!-- Main Content -->
     <div class="content">
       <iron-pages attr-for-selected="data-route" selected="{{route}}">
@@ -113,7 +119,7 @@
       <section data-route="home">
         <site-list></site-list>
         <paper-material elevation="1">
-          <p class="paper-font-body2"><a>Made for DCH by Hackit</a></p>
+          <p class="paper-font-body2"><a>Made for Devon and Cornwall Housing by HackIT</a></p>
         </paper-material>
       </section>
 
@@ -132,6 +138,12 @@
       <section data-route="contact">
         <paper-material elevation="1">
         <contact-page></contact-page>
+        </paper-material>
+      </section>
+		  
+	 <section data-route="whitelist">
+        <paper-material elevation="1">
+        <whitelist-page></whitelist-page>
         </paper-material>
       </section>
 
