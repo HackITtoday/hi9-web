@@ -1,5 +1,5 @@
 
-<dom-module id="privacy-page">
+<dom-module id="whitelist-page">
 
 <style>
 /* CSS rules for your element */
@@ -8,7 +8,7 @@
 <template>
   <!-- local DOM for your element -->
 
-  <section is=dom-bind>
+  <section>
     <h1>White List of Sites That We Track</h1>
 
     <article> 
@@ -21,15 +21,12 @@
     </article>
   </section>
 	
-  <google-sheets>
-    key="1knH1i3Ryfz7xDd4pE4F_HFlsh6IhaVOLjD1Q8iD7WXY" tab-id="1" rows="{{rows}}">
-  </google-sheets>
 </template>
 
 </dom-module>
 <script>
 // element registration
 Polymer({
-is: 'whitelist',
+is: 'whitelist-page',
 });
 </script>
