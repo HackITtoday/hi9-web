@@ -123,9 +123,13 @@
         <span>Contact</span>
       </a>
 		  
-	   <a data-route="whitelist" href="/whitelist">
+	  <a data-route="whitelist" href="/whitelist">
         <iron-icon icon="bookmark"></iron-icon>
         <span>White List</span>
+      </a>
+	  <a data-route="stats" href="/stats">
+        <iron-icon icon="bookmark"></iron-icon>
+        <span>Stats</span>
       </a>
       </paper-menu>
     </div>
@@ -180,6 +184,12 @@
 	 <section data-route="whitelist">
         <paper-material elevation="1">
         <whitelist-page></whitelist-page>
+        </paper-material>
+      </section>
+		  
+	  <section data-route="stats">
+        <paper-material elevation="1">
+        <stats-page></stats-page>
         </paper-material>
       </section>
 
