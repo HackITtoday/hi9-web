@@ -2,76 +2,98 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit" />
-  <title>Hi9 - Connecting All</title>
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="Polymer Starter Kit" />
+	<title>Hi9 - Connecting All</title>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  <!-- Chrome for Android theme color -->
-  <meta name="theme-color" content="#303F9F">
+	<!-- Chrome for Android theme color -->
+	<meta name="theme-color" content="#303F9F">
 
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
 
-  <!-- Tile color for Win8 -->
-  <meta name="msapplication-TileColor" content="#3372DF">
+	<!-- Tile color for Win8 -->
+	<meta name="msapplication-TileColor" content="#3372DF">
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Polymer Starter Kit">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Polymer Starter Kit">
+	<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+	<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
-  <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<!-- Tile icon for Win8 (144x144) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
 
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild-->
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild-->
 
-  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <!-- endbuild -->
+	<!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<!-- endbuild -->
 
-  <!-- will be replaced with elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
-  <!-- endreplace-->
-	
+	<!-- will be replaced with elements/elements.vulcanized.html -->
+	<link rel="import" href="elements/elements.html">
+	<!-- endreplace-->
+
 	<!-- Start of hi9support Zendesk Widget script -->
-<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","hi9support.zendesk.com");/*]]>*/</script>
-<!-- End of hi9support Zendesk Widget script -->
-	
+<!-- 	<script>
+		/*<![CDATA[*/
+		window.zEmbed || function(e, t) {
+			var n, o, d, i, s, a = [],
+				r = document.createElement("iframe");
+			window.zEmbed = function() {
+				a.push(arguments)
+			}, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+			try {
+				o = s
+			} catch (c) {
+				n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+			}
+			o.open()._l = function() {
+				var o = this.createElement("script");
+				n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
+			}, o.write('<body onload="document._l();">'), o.close()
+		}("https://assets.zendesk.com/embeddable_framework/main.js", "hi9support.zendesk.com"); /*]]>*/
+	</script> -->
+	<!-- End of hi9support Zendesk Widget script -->
+
 	<!-- Hotjar Tracking Code for hi9.uk -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:56481,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<!-- End of Hot Jar Tracking Code	 -->
-	
+	<script>
+		(function(h, o, t, j, a, r) {
+			h.hj = h.hj || function() {
+				(h.hj.q = h.hj.q || []).push(arguments)
+			};
+			h._hjSettings = {
+				hjid: 56481,
+				hjsv: 5
+			};
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script');
+			r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+	<!-- End of Hot Jar Tracking Code	 -->
+
 	<!-- Data Layer for Google Tag Manager	 -->
 	<script>
-		dataLayer=[
-			{
-				'pageFilter': 'filter',
-				'pageCard': 'card',
-				'pageEmail': 'mailTo',
-				'pageTel': 'tel'
-			}
-		];
-	</script> 
+		dataLayer = [{
+			'pageFilter': 'filter',
+			'pageCard': 'card',
+			'pageEmail': 'mailTo',
+			'pageTel': 'tel'
+		}];
+	</script>
 	<!-- End of Tag Manager	-->
 
 </head>
@@ -79,145 +101,166 @@
 <body unresolved class="fullbleed layout vertical" style="overflow: hidden;">
 
 	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NH24M5"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-NH24M5');</script>
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-NH24M5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'//www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NH24M5');
+	</script>
 	<!-- End Google Tag Manager -->
 
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
+	<span id="browser-sync-binding"></span>
+	<template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel">
-    <div drawer>
+		<paper-drawer-panel id="paperDrawerPanel">
+			<div drawer>
 
-      <!-- Drawer Toolbar -->
-      <paper-toolbar id="drawerToolbar">
-      <span class="paper-font-title">Menu</span>
-      </paper-toolbar>
+				<!-- Drawer Toolbar -->
+				<paper-toolbar id="drawerToolbar">
+					<span class="paper-font-title">Menu</span>
+				</paper-toolbar>
 
-      <!-- Drawer Content -->
-      <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
-      <a data-route="home" href="/">
-        <iron-icon icon="home"></iron-icon>
-        <span>Home</span>
-      </a>
+				<!-- Drawer Content -->
+				<paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
+					<a data-route="home" href="/">
+						<iron-icon icon="home"></iron-icon>
+						<span>Home</span>
+					</a>
 
-      <a data-route="privacy" href="/privacy">
-        <iron-icon icon="info"></iron-icon>
-        <span>Privacy</span>
-      </a>
-      <template is="dom-if" if="{{!show_model}}">
-        <a data-route="user" href="/user">
-          <iron-icon icon="info"></iron-icon>
-          <span>Account</span>
-        </a>
-      </template>
+					<a data-route="privacy" href="/privacy">
+						<iron-icon icon="info"></iron-icon>
+						<span>Privacy</span>
+					</a>
+					<template is="dom-if" if="{{!show_model}}">
+						<a data-route="user" href="/user">
+							<iron-icon icon="info"></iron-icon>
+							<span>Account</span>
+						</a>
+					</template>
 
+					<a data-route="contact" href="/contact">
+						<iron-icon icon="mail"></iron-icon>
+						<span>Contact</span>
+					</a>
 
-      <a data-route="contact" href="/contact">
-        <iron-icon icon="mail"></iron-icon>
-        <span>Contact</span>
-      </a>
-		  
-	  <a data-route="whitelist" href="/whitelist">
-        <iron-icon icon="bookmark"></iron-icon>
-        <span>White List</span>
-      </a>
-	  <a data-route="stats" href="/stats">
-        <iron-icon icon="bookmark"></iron-icon>
-        <span>Stats</span>
-      </a>
-      </paper-menu>
-    </div>
-    <paper-header-panel main mode="waterfall-tall">
+					<a data-route="whitelist" href="/whitelist">
+						<iron-icon icon="bookmark"></iron-icon>
+						<span>White List</span>
+					</a>
+					<a data-route="whitelist" href="https://hi9support.zendesk.com">
+						<iron-icon icon="help"></iron-icon>
+						<span>Help</span>
+					</a>
+					
+					<a data-route="stats" href="/stats">
+						<iron-icon icon="bookmark"></iron-icon>
+						<span>Stats</span>
+					</a>
+				</paper-menu>
+			</div>
+			<paper-header-panel main mode="waterfall-tall">
 
-    <!-- Main Toolbar -->
-    <paper-toolbar id="mainToolbar">
-    <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-    <span class="flex"></span>
+				<!-- Main Toolbar -->
+				<paper-toolbar id="mainToolbar">
+					<paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+					<span class="flex"></span>
 
-    <!-- Toolbar icons -->
+					<!-- Toolbar icons -->
 
-    <hi9-login show_model="{{show_model}}" user="{{user}}"></hi9-login>
+					<hi9-login show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
-    <!-- Application name -->
-    <div class="middle paper-font-display2 app-name">Hi9</div>
+					<!-- Application name -->
+					<div class="middle paper-font-display2 app-name">Hi9</div>
 
-    <!-- Application sub title -->
-    <div class="bottom title"></div>
-	
-    </paper-toolbar>
-	
-    <!-- Main Content -->
-    <div class="content">
-      <iron-pages attr-for-selected="data-route" selected="{{route}}">
+					<!-- Application sub title -->
+					<div class="bottom title"></div>
 
-      <section data-route="home">
-        <site-list></site-list>
-        <paper-material elevation="1">
-          <p class="paper-font-body2"><a>Helping People Get Connected Made by HackIT for Devon and Cornwall Housing</a></p>
-        </paper-material>
-      </section>
+				</paper-toolbar>
 
-      <section data-route="privacy">
-        <paper-material elevation="1">
-        <privacy-page></privacy-page>
-        </paper-material>
-      </section>      
-      
-      <section data-route="user">
-        <paper-material elevation="1">
-        <user-page></user-page>
-        </paper-material>
-      </section>
+				<!-- Main Content -->
+				<div class="content">
+					<iron-pages attr-for-selected="data-route" selected="{{route}}">
 
-      <section data-route="contact">
-        <paper-material elevation="1">
-        <contact-page></contact-page>
-        </paper-material>
-      </section>
-		  
-	 <section data-route="whitelist">
-        <paper-material elevation="1">
-        <whitelist-page></whitelist-page>
-        </paper-material>
-      </section>
-		  
-	  <section data-route="stats">
-        <paper-material elevation="1">
-        <stats-page></stats-page>
-        </paper-material>
-      </section>
+						<section data-route="home">
+							<site-list></site-list>
+							<paper-material elevation="1">
+								<p class="paper-font-body2"><a>Helping People Get Connected Made by HackIT for Devon and Cornwall Housing</a>
+								</p>
+							</paper-material>
+						</section>
 
-      </iron-pages>
-    </div>
-    </paper-header-panel>
-    </paper-drawer-panel>
+						<section data-route="privacy">
+							<paper-material elevation="1">
+								<privacy-page></privacy-page>
+							</paper-material>
+						</section>
 
-    <paper-toast id="caching-complete"
-    duration="6000"
-    text="Caching complete! This app will work offline.">
-    </paper-toast>
+						<section data-route="user">
+							<paper-material elevation="1">
+								<user-page></user-page>
+							</paper-material>
+						</section>
 
-    <platinum-sw-register auto-register
-    clients-claim
-    skip-waiting
-    on-service-worker-installed="displayInstalledToast">
-    <platinum-sw-cache default-cache-strategy="networkFirst"
-    precache-file="precache.json">
-    </platinum-sw-cache>
-    </platinum-sw-register>
-    <go-squared user="[[user]]" id="GSN-963825-Q" ></go-squared>
+						<section data-route="contact">
+							<paper-material elevation="1">
+								<contact-page></contact-page>
+							</paper-material>
+						</section>
 
-  </template>
+						<section data-route="whitelist">
+							<paper-material elevation="1">
+								<whitelist-page></whitelist-page>
+							</paper-material>
+						</section>
 
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
+						<section data-route="stats">
+							<paper-material elevation="1">
+								<stats-page></stats-page>
+							</paper-material>
+						</section>
+
+					</iron-pages>
+				</div>
+			</paper-header-panel>
+		</paper-drawer-panel>
+
+		<paper-toast id="caching-complete" duration="6000" text="Caching complete! This app will work offline.">
+		</paper-toast>
+
+		<platinum-sw-register auto-register clients-claim skip-waiting on-service-worker-installed="displayInstalledToast">
+			<platinum-sw-cache default-cache-strategy="networkFirst" precache-file="precache.json">
+			</platinum-sw-cache>
+		</platinum-sw-register>
+		<go-squared user="[[user]]" id="GSN-963825-Q"></go-squared>
+
+	</template>
+
+	<!-- build:js scripts/app.js -->
+	<script src="scripts/app.js"></script>
+	<!-- endbuild-->
+	<!-- Supportkit script	 -->
+	<<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="https://cdn.supportkit.io/supportkit.min.js"></script>
+		<script>
+			SupportKit.init({
+					appToken: '7to4eya2zz43eg49n1f5we1wd',
+					customText: {headerText: 'Chat With Us?'}
+					});
+	</script>
+		<!-- End of Supportscript	 -->
 </body>
 
 </html>

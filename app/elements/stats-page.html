@@ -1,24 +1,34 @@
-
 <dom-module id="stats-page">
 
-<style>
-/* CSS rules for your element */
-</style>
+	<style>
+		/* CSS rules for your element */
+	</style>
 
-<template>
-  <!-- local DOM for your element -->
+	<template>
+		<!-- local DOM for your element -->
 
-  <section>
-    <h1>Stastistics Page</h1>
+		<section>
+			<h1>Stastistics Page</h1>
+			
+			<!-- DCH Whitelist -->
+			<google-sheets id="sheet" key="1lEUiOQ5_3UxMD3MZmxHWdccIxDzFZm-RQ8vG9btzU_Q" tab-id="1" published rows="{{rows}}"></google-sheets>
 
-  </section>
-	
-</template>
+
+			<google-chart type='pie' 
+						  options='{"title": "Distribution of days in 2001Q1"}' 
+						  cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]' 
+						  rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
+			</google-chart>
+
+
+		</section>
+
+	</template>
 
 </dom-module>
 <script>
-// element registration
-Polymer({
-is: 'stats-page',
-});
+	// element registration
+	Polymer({
+		is: 'stats-page',
+	});
 </script>
