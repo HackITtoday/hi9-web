@@ -9,6 +9,13 @@
   app.displayInstalledToast = function() {
     document.querySelector('#caching-complete').show();
   };
+  app.roleIs = function(roleTest,role) { 
+    if (role === roleTest) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   // Listen for template bound event to know when bindings
   // have resolved and content has been stamped to the page

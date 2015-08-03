@@ -166,7 +166,7 @@
 						<span>Help</span>
 					</a>
 					
-					<template is="dom-if" if="{{roleIs('admin')}}">
+					<template is="dom-if" if="{{roleIs('admin',role)}}">
 					<a data-route="stats" href="/stats">
 						<iron-icon icon="bookmark"></iron-icon>
 						<span>Stats</span>
@@ -229,7 +229,7 @@
 							</paper-material>
 						</section>
 
-					      <template is="dom-if" if="{{roleIs('admin')}}">
+					      <template is="dom-if" if="{{roleIs('admin',role)}}">
                                                 <section data-route="stats">
 							<paper-material elevation="1">
 								<stats-page></stats-page>
