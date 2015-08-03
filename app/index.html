@@ -102,7 +102,7 @@
 
 	<!-- Google Tag Manager -->
 	<noscript>
-		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-NH24M5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH24M5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<script>
 		(function(w, d, s, l, i) {
@@ -166,10 +166,12 @@
 						<span>Help</span>
 					</a>
 					
+					<template is="dom-if" if="{{roleIs('admin')}}">
 					<a data-route="stats" href="/stats">
 						<iron-icon icon="bookmark"></iron-icon>
 						<span>Stats</span>
 					</a>
+                                        </template>
 				</paper-menu>
 			</div>
 			<paper-header-panel main mode="waterfall-tall">
@@ -181,7 +183,7 @@
 
 					<!-- Toolbar icons -->
 
-					<hi9-login show_model="{{show_model}}" user="{{user}}"></hi9-login>
+                                        <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
 					<!-- Application name -->
 					<div class="middle paper-font-display2 app-name">Hi9</div>
@@ -227,12 +229,13 @@
 							</paper-material>
 						</section>
 
-						<section data-route="stats">
+					      <template is="dom-if" if="{{roleIs('admin')}}">
+                                                <section data-route="stats">
 							<paper-material elevation="1">
 								<stats-page></stats-page>
 							</paper-material>
-						</section>
-
+					 	</section>
+                                              </template>
 					</iron-pages>
 				</div>
 			</paper-header-panel>
