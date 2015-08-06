@@ -174,7 +174,7 @@
                                         </template>
 				</paper-menu>
 			</div>
-			<paper-header-panel main mode="waterfall-tall">
+                        <paper-header-panel main mode$="{{waterfall}}">
 
 				<!-- Main Toolbar -->
 				<paper-toolbar id="mainToolbar">
@@ -182,8 +182,9 @@
 					<span class="flex"></span>
 
 					<!-- Toolbar icons -->
-
-                                        <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+                                        <template is="mod-if" if="{{show_model}}">
+                                          <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+                                        </template>
 
 					<!-- Application name -->
 					<div class="middle paper-font-display2 app-name">Hi9</div>
@@ -213,7 +214,7 @@
 
 						<section data-route="user">
 							<paper-material elevation="1">
-								<user-page></user-page>
+                                                          <user-page><hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}"></hi9-login></user-page>
 							</paper-material>
 						</section>
 
@@ -256,7 +257,7 @@
 	<script src="scripts/app.js"></script>
 	<!-- endbuild-->
 	<!-- Supportkit script	 -->
-	<<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="https://cdn.supportkit.io/supportkit.min.js"></script>
 		<script>
 			SupportKit.init({
