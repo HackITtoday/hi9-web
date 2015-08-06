@@ -115,9 +115,21 @@
           dl = l != 'dataLayer' ? '&l=' + l : '';
           j.async = true;
           j.src =
-          '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
           f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-NH24M5');
+         
+    window.setTimeout(function() {
+      //setup triggers
+      //dataLayer.push({'event': 'button1-click'});
+      var toTag = document.querySelectorAll("paper-filter paper-button");
+      for (var i=0,l = toTag.length; i < l; i++ ) {
+          debugger;  
+        toTag[i].onclick = function() {
+          dataLayer.push({'event': 'filter'});
+        }
+      };
+    } ,10000);
       </script>
       <!-- End Google Tag Manager -->
 
