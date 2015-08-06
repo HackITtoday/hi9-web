@@ -37,7 +37,7 @@
   };
   
   app.waterfall = function(user) { 
-    if (!user.hasOwnProperty("uid")) {
+    if ((user === null) || !user.hasOwnProperty("uid")) {
       return "waterfall-tall";
     }
   }
