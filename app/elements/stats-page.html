@@ -14,7 +14,11 @@
 			<h3>Clicks Per Category</h3>
 
 			<div id="selection-piechart">
-				<google-chart type="pie" id="selection-chart" options='{"title": "Clicks per Category"}' cols='[{"label": "Category", "type": "string"},{"label": "Clicks", "type": "number"}]' rows='[["Health", 31],["Jobs", 28],["Services", 31],["Shopping", 30],["Finance", 31],["Social Media", 30]]'>
+				<google-chart type="pie" 
+							  id="selection-chart" 
+							  options='{"title": "Clicks per Category"}' 
+							  cols='[{"label": "Category", "type": "string"},{"label": "Clicks", "type": "number"}]' 
+							  rows='[["Health", 31],["Jobs", 28],["Services", 31],["Shopping", 30],["Finance", 31],["Social Media", 30]]'>
 				</google-chart>
 				<div id="selection-display">
 					Clicks: <span id="selection-label">None</span>.
@@ -25,7 +29,10 @@
 			<!-- Cicks and Logins over Time	 -->
 			<h3>Logins</h3>
 
-			<google-chart type='line' options='{"title": "When do Users Login"}' cols='[{"label": "Hour", "type": "string"},{"label": "Logins", "type": "number"}]' rows='[["00", 1],["01", 0],["02", 00],["03", 02],["04", 04],["05", 06]]'>
+			<google-chart type='line' 
+						  options='{"title": "When do Users Login"}'
+						  cols='[{"label": "Hour", "type": "string"},{"label": "Logins", "type": "number"}]' 
+						  rows='[["00", 1],["01", 0],["02", 00],["03", 02],["04", 04],["05", 06]]'>
 			</google-chart>
 			<!-- End of Cicks and Logins over Time	 -->
 
