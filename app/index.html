@@ -103,7 +103,6 @@
 			//dataLayer.push({'event': 'button1-click'});
 			var toTag = document.querySelectorAll("paper-filter paper-button");
 			for (var i = 0, l = toTag.length; i < l; i++) {
-				debugger;
 				toTag[i].onclick = function() {
 					dataLayer.push({
 						'event': 'filter'
