@@ -225,7 +225,7 @@
 						<template is="dom-if" if="{{roleIs('admin',role)}}">
 							<section data-route="stats">
 								<paper-material elevation="1">
-									<stats-page></stats-page>
+									<stats-page user="{{user}}"></stats-page>
 								</paper-material>
 							</section>
 						</template>
