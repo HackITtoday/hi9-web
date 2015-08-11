@@ -1,28 +1,23 @@
 <dom-module id="stats-page">
-  <style>
-    :host {
-      display: block;
-      text-align: center;
-      background-color: #eeeee0;
-       font-family: Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 300;
-	  padding-top:10px;
-    }
-    a:link {
-      color: black;
-    }
-	h3 {
-		font-weight: 300;
-	}
-	paper-filter {
-		margin-top: 10px;
-	}
-  </style>
-
-
-	<style>
-		/* CSS rules for your element */
-	</style>
+<style>
+  :host {
+    display: block;
+    text-align: center;
+    background-color: #eeeee0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding-top:10px;
+  }
+  a:link {
+    color: black;
+  }
+  h3 {
+    font-weight: 300;
+  }
+  paper-filter {
+    margin-top: 10px;
+  }
+</style>
 
   <template>
     <h1>Stastistics Page</h1>
@@ -49,14 +44,14 @@
   Polymer({
     is: 'stats-page',
     properties: {
-      user:Object
+      user:Object,
       usersUrl:{
         computed:"getUsersUrl(user)"
       }
     },
     getUsersUrl: function(user) {
       if (user !== null && user.hasOwnProperty('uid')) {
-        return "https://hi9site.firebaseio.com/users/" + user.uid + "/";
+        return "https://hi9site.firebaseio.com/owner/" + user.uid + "/users";
       } else {
         return null;
       }
