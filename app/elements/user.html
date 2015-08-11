@@ -5,8 +5,19 @@
 </style>
 
   <template>
-    <p> Your page </p> 
-    <content></content>
+    <h3> Account Information </h3> 
+	  
+		<firebase-collection location="{{usersUrl}}" data="{{cards}}">
+    	</firebase-collection>
+	  
+	  <h4>
+		  [[item.telno]]
+	  </h4>
+	  <h4>
+		  [[item.email]]
+	  </h4>
+	  
+	  
   </template>
 
 </dom-module>
