@@ -1,59 +1,71 @@
 <dom-module id="stats-page">
+  <style>
+    :host {
+      display: block;
+      text-align: center;
+      background-color: #eeeee0;
+       font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 300;
+	  padding-top:10px;
+    }
+    paper-material {
+      background: #fff;
+      margin: 16px, 16px;
+      height: 100px;
+      margin:5px;
+      display: inline-block;
+    }
+    a:link {
+      color: black;
+    }
+	h3 {
+		font-weight: 300;
+	}
+	paper-filter {
+		margin-top: 10px;
+	}
+  </style>
 
-	<style>
-		/* CSS rules for your element */
-	</style>
-
-	<template>
-		<!-- local DOM for your element -->
-
-		<section>
-			<!-- Pie Chart of Clicks per Category Selection	 -->
-			<h1>Stastistics Page</h1>
-
-			<h3>Clicks Per Category</h3>
-
-			<div id="selection-piechart">
-				<google-chart type="pie" id="selection-chart" options='{"title": "Clicks per Category"}' cols='[{"label": "Category", "type": "string"},{"label": "Clicks", "type": "number"}]' rows='[["Health", 31],["Jobs", 28],["Services", 31],["Shopping", 30],["Finance", 31],["Social Media", 30]]'>
-				</google-chart>
-				<div id="selection-display">
-					Clicks: <span id="selection-label">None</span>.
-				</div>
-			</div>
-			<!-- End of Pie Chart of Clicks per Category Selection	-->
-
-			<!-- Cicks and Logins over Time	 -->
-			<h3>Logins</h3>
-
-			<google-chart type='line' options='{"title": "When do Users Login"}' cols='[{"label": "Hour", "type": "string"},{"label": "Logins", "type": "number"}]' rows='[["00", 1],["01", 0],["02", 00],["03", 02],["04", 04],["05", 06]]'>
-			</google-chart>
-			<!-- End of Cicks and Logins over Time	 -->
-
-		</section>
-
-	</template>
-
-</dom-module>
-<script>
-	// element registration
-	Polymer({
-		is: 'stats-page',
-	});
-	// Pie Chart Where you can select data
-	document.addEventListener('WebComponentsReady', function() {
-		var chart = document.querySelector('#selection-chart');
-		var label = document.querySelector('#selection-label');
-		chart.addEventListener('google-chart-render', function() {
-			chart.selection = [{
-				row: 1,
-				column: null
-			}];
-			label.textContent = chart.selection[0].row;
-		});
-		document.addEventListener('google-chart-select', function(e) {
-			label.textContent =
-				chart.selection[0] ? chart.selection[0].row : 'None';
-		});
-	});
-	// End of Pie Chart Script where you can select data
+  <template>
+    <h1>Stastistics Page</h1>
+    
+    <firebase-collection location="{{usersUrl}}" data="{{cards}}">
+    </firebase-collection>
+    <!--  <iron-list style="height:600px" items="[[output]]" id="cards">  -->
+    <template is="dom-repeat" items="[[cards]]" id="cards">
+        <a href="[[item.url]]" title="[[item.value]]" >
+          <paper-material>
+            <div class="body1" style="float: left;width:150px">
+              <h3>[[item.value]]</h3>
+              <span>[[item.title]]</span>
+            </div>
+            <iron-image sizing="contain" src="[[item.image]]" style="float: right;width:100px; height:100px;"></iron-image>
+          </paper-material>
+        </a>
+    </template>
+    <!-- </iron-list> -->
+  </template>
+<script type="text/javascript">
+  Polymer({
+    is: 'stats-page',
+    properties: {
+      user:Object
+      usersUrl:{
+        computed:"getUsersUrl(user)"
+      }
+    },
+    getUsersUrl: function(user) {
+      if (user !== null && user.hasOwnProperty('uid')) {
+        return "https://hi9site.firebaseio.com/users/" + user.uid + "/";
+      } else {
+        return null;
+      }
+    }.
+    ready: function() {
+      window.setInterval(function() {
+        document.querySelectorAll('html site-list')[0].$.users.render();
+      },3000)
+    }
+  });
 </script>
+</dom-module>
