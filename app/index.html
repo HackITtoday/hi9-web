@@ -103,8 +103,7 @@
 			//dataLayer.push({'event': 'button1-click'});
 			var toTag = document.querySelectorAll("paper-filter paper-button");
 			for (var i = 0, l = toTag.length; i < l; i++) {
-				debugger;
-				toTag[i].onclick = function() {
+					toTag[i].onclick = function() {
 					dataLayer.push({
 						'event': 'filter'
 					});
@@ -150,11 +149,11 @@
 						<span>Contact</span>
 					</a>
 
-					<a data-route="whitelist" href="/whitelist">
+<!-- 					<a data-route="whitelist" href="/whitelist">
 						<iron-icon icon="bookmark"></iron-icon>
 						<span>White List</span>
-					</a>
-					<a data-route="whitelist" href="http://help.hi9.uk">
+					</a> -->
+					<a data-route="help" href="http://help.hi9.uk">
 						<iron-icon icon="help"></iron-icon>
 						<span>Help</span>
 					</a>
@@ -180,13 +179,13 @@
 
 					<!-- Application name -->
 					<div class="middle middle-container center horizontal layout">
-						<div class="app-name">Hi9</div>
+						<div class="app-name">Hi9 - Connecting the Unconnected</div>
 					</div>
 
 					<!-- Application sub title -->
-					<div class="bottom bottom-container center horizontal layout">
+<!-- 					<div class="bottom bottom-container center horizontal layout">
 						<div class="bottom-title paper-font-subhead">You are not logged in. Login to Activate your free Account</div>
-					</div>
+					</div> -->
 
 				</paper-toolbar>
 
