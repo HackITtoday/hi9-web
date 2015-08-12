@@ -1,31 +1,43 @@
 <dom-module id="user-page">
 
-<style>
-/* CSS rules for your element */
-</style>
+	<style>
+		/* CSS rules for your element */
+	</style>
 
-  <template>
-    <h3> Account Information </h3> 
-	  
+	<template>
+		<h3> Account Information </h3> 
+
 		<firebase-collection location="{{usersUrl}}" data="{{cards}}">
-    	</firebase-collection>
-	  
-	   <content></content>
-	  
-	  <h4>
+		</firebase-collection>
+
+
+
+		<div>
+			<p>
+				Please Make Sure that you add the Hi9 Extension.
+			</p>
+			<p>
+				If not then <a href="https://chrome.google.com/webstore/detail/hi9/hcidobkpedoelpnebadegeppfccncdel?">click here</a> and Add the Extension to Chrome
+			</p>
+		</div>
+
+		<content></content>
+
+		<h4>
 		  [[item.telno]]
-	  </h4>
-	  <h4>
+	  	</h4>
+		<h4>
 		  [[item.email]]
-	  </h4>
-	  
-	  
-  </template>
+	  	</h4>
+
+
+
+	</template>
 
 </dom-module>
 <script>
-// element registration
-Polymer({
-is: 'user-page'
-});
+	// element registration
+	Polymer({
+		is: 'user-page'
+	});
 </script>
