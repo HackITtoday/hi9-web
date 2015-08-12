@@ -22,10 +22,10 @@
   <template>
     <h1>Stastistics Page</h1>
     
-    <firebase-collection location="{{usersUrl}}" data="{{cards}}">
+    <firebase-collection location="{{usersUrl}}" data="{{users}}">
     </firebase-collection>
     <!--  <iron-list style="height:600px" items="[[output]]" id="cards">  -->
-    <template is="dom-repeat" items="[[cards]]" id="cards">
+    <template is="dom-repeat" items="[[users]]" id="users">
         <a href="[[item.url]]" title="[[item.value]]" >
           <paper-material>
             <div class="body1" style="float: left;width:150px">
@@ -44,7 +44,9 @@
   Polymer({
     is: 'stats-page',
     properties: {
-      user:Object,
+      user:{ 
+        type :Object
+      },
       usersUrl:{
         computed:"getUsersUrl(user)"
       }
