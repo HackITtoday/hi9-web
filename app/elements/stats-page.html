@@ -22,7 +22,7 @@
   <template>
     <h1>Stastistics Page</h1>
     
-    <firebase-collection location="{{usersUrl}}" data="{{users}}">
+    <firebase-collection location="https://hi9site.firebaseio.com/users" data="{{users}}">
     </firebase-collection>
     <!--  <iron-list style="height:600px" items="[[output]]" id="cards">  -->
     <template is="dom-repeat" items="[[users]]" id="users">
