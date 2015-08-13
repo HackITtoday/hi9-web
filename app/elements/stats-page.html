@@ -52,13 +52,12 @@
 
     <template is="dom-repeat" filter="isOwner" observe="owner" items="{{users}}" id="users">
       <paper-material elevation="1">
-        <img src="{{item.user.google.profileImageURL}}" height="100px" />
         <div style="float: left;width:150px">
               <h3>[[item.user.google.displayName]]</h3>
               <span>[[item.num]]</span>
               <span>[[item.email]]</span>
             </div>
-            <iron-image sizing="contain" src="[[item.image]]" style="float: right;width:100px; height:100px;"></iron-image>
+            <iron-image sizing="contain" src="[[item.user.google.profileImageURL]]" style="float: right;width:100px; height:100px;"></iron-image>
           </paper-material>
     </template>
   </template>
