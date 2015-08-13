@@ -14,9 +14,6 @@
   h3 {
     font-weight: 300;
   }
-  paper-filter {
-    margin-top: 10px;
-  }
 </style>
 
   <template>
@@ -27,7 +24,8 @@
 
     <template is="dom-repeat" filter="isOwner" observe="owner" items="{{users}}" id="users">
           <paper-material>
-            <div class="body1" style="float: left;width:150px">
+            <div style="float: left;width:150px">
+              <img src="{{item.user.google.profileImageURL}}" height="100px" />
               <h3>[[item.user.google.displayName]]</h3>
               <span>[[item.num]]</span>
               <span>[[item.email]]</span>
