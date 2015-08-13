@@ -24,20 +24,16 @@
     
     <firebase-collection location="https://hi9site.firebaseio.com/users" data="{{users}}">
     </firebase-collection>
-    <!--  <iron-list style="height:600px" items="[[output]]" id="cards">  -->
-    <template is="dom-repeat" items="[[users]]" id="users">
-      <template is="dom-if" if="{{item.owner === Yarlington}}">
-        <a href="[[item.url]]" title="[[item.value]]" >
+
+    <template is="dom-repeat" filter="isOwner" observe="owner" items="{{users}}" id="users">
           <paper-material>
             <div class="body1" style="float: left;width:150px">
-              <h3>[[user.google.displayName]]</h3>
+              <h3>[[item.user.google.displayName]]</h3>
               <span>[[item.num]]</span>
               <span>[[item.email]]</span>
             </div>
             <iron-image sizing="contain" src="[[item.image]]" style="float: right;width:100px; height:100px;"></iron-image>
           </paper-material>
-        </a>
-      </template>
     </template>
     <!-- </iron-list> -->
   </template>
@@ -47,19 +43,13 @@
     properties: {
       user:{ 
         type:Object
-      },
-      usersUrl:{
-        computed:"getUsersUrl(user)"
       }
     },
-    getUsersUrl: function(user) {
-      if (user !== null && user.hasOwnProperty('uid')) {
-        return "https://hi9site.firebaseio.com/owner/" + user.uid + "/users";
-      } else {
-        return null;
-      }
+    isOwner: function(item) {
+      return item.owner == "Yarlington"; //TODO FIX
     },
     ready: function() {
+      
     }
   });
 </script>
