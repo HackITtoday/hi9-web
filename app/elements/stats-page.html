@@ -26,17 +26,19 @@
     </firebase-collection>
     <!--  <iron-list style="height:600px" items="[[output]]" id="cards">  -->
     <template is="dom-repeat" items="[[users]]" id="users">
+      <template is="dom-if" if="{{item.owner === Yarlington}}">
         <a href="[[item.url]]" title="[[item.value]]" >
           <paper-material>
             <div class="body1" style="float: left;width:150px">
               <h3>[[item.value]]</h3>
-              <span>[[item.title]]</span>
-              <span>[[item.telno]]</span>
+              <span>[[user.google.displayName]]</span>
+              <span>[[item.num]]</span>
               <span>[[item.email]]</span>
             </div>
             <iron-image sizing="contain" src="[[item.image]]" style="float: right;width:100px; height:100px;"></iron-image>
           </paper-material>
         </a>
+      </template>
     </template>
     <!-- </iron-list> -->
   </template>
