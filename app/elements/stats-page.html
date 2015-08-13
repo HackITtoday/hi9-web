@@ -23,7 +23,7 @@
     </firebase-collection>
 
     <template is="dom-repeat" filter="isOwner" observe="owner" items="{{users}}" id="users">
-          <paper-material>
+          <paper-material elevation="1">
             <div style="float: left;width:150px">
               <img src="{{item.user.google.profileImageURL}}" height="100px" />
               <h3>[[item.user.google.displayName]]</h3>
