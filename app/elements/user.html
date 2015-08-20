@@ -1,43 +1,37 @@
 <dom-module id="user-page">
-
-	<style>
-		/* CSS rules for your element */
-	</style>
-
-	<template>
-		<h3> Account Information </h3> 
-
-		<firebase-collection location="{{usersUrl}}" data="{{cards}}">
-		</firebase-collection>
-
-
-
-		<div>
-			<p>
-				Please Make Sure that you add the Hi9 Extension.
-			</p>
-			<p>
-				If not then <a href="https://chrome.google.com/webstore/detail/hi9/hcidobkpedoelpnebadegeppfccncdel?">click here</a> and Add the Extension to Chrome
-			</p>
-		</div>
-
-		<content></content>
-
-		<h4>
-		  [[item.telno]]
-	  	</h4>
-		<h4>
-		  [[item.email]]
-	  	</h4>
-
-
-
-	</template>
-
+  <template>
+    <h3> Account Information </h3> 
+    <div>
+      <p> Hi <span>{{name}}</span> Please Make Sure that you add the Hi9 Extension.  </p>
+      <p> If not then <a href="https://chrome.google.com/webstore/detail/hi9/hcidobkpedoelpnebadegeppfccncdel?">click here</a> and Add the Extension to Chrome </p>
+    </div>
+    <paper-input floatingLabel label="Email" value="{{user.email}}" type="email">{{user.email}}</paper-input>
+    <paper-input floatingLabel label="Phone Number" value="here" type="phone">here</paper-input>
+    <paper-input floatingLabel label="How give you the Chromebook" value="{{user.owner}}" type="text"></paper-input>
+    <content></content>
+  </template>
 </dom-module>
 <script>
-	// element registration
-	Polymer({
-		is: 'user-page'
-	});
+// element registration
+  Polymer({
+    is: 'user-page',
+    properties: {
+      user: {
+        type:Object, notify:true, observer : "_log(user)"
+      },
+      userData: {
+        type:Object, notify:true, observer : "_log(userData)"
+      },
+      name : {
+        computed: "getVal(user.google.displayName)"
+      }
+    },
+    getVal: function(val) {
+      debugger;
+      return val;
+    },
+    _log : function(data) {
+      console.log(data);
+    }
+  });
 </script>
