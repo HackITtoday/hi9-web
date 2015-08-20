@@ -5,9 +5,9 @@
       <p> Hi <span>{{name}}</span> Please Make Sure that you add the Hi9 Extension.  </p>
       <p> If not then <a href="https://chrome.google.com/webstore/detail/hi9/hcidobkpedoelpnebadegeppfccncdel?">click here</a> and Add the Extension to Chrome </p>
     </div>
-    <paper-input floatingLabel label="Email" value="{{user.email}}" type="email">{{user.email}}</paper-input>
-    <paper-input floatingLabel label="Phone Number" value="here" type="phone">here</paper-input>
-    <paper-input floatingLabel label="How give you the Chromebook" value="{{user.owner}}" type="text"></paper-input>
+    <paper-input floatingLabel label="Email" value="{{data.email}}" type="email"></paper-input>
+    <paper-input floatingLabel label="Phone Number" value="{{data.num}}" type="phone"></paper-input>
+    <paper-input floatingLabel label="How give you the Chromebook" value="{{data.owner}}" type="text"></paper-input>
     <content></content>
   </template>
 </dom-module>
@@ -19,7 +19,7 @@
       user: {
         type:Object, notify:true, observer : "_log(user)"
       },
-      userData: {
+      data: {
         type:Object, notify:true, observer : "_log(userData)"
       },
       name : {
