@@ -177,7 +177,7 @@
 					<span class="flex"></span>
 
 					<!-- Toolbar icons -->
-                                        <hi9-login role="{{role}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+                                        <hi9-login role="{{role}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
 					<!-- Application name -->
 					<div class="middle middle-container center horizontal layout">
@@ -211,13 +211,13 @@
 
 						<section data-route="user">
 							<paper-material elevation="1">
-                                                          <user-page user={{user}} data="{{userData}}">
+                                                          <user-page user="{{user}}" >
                                                             <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
-								</user-page>
+							  </user-page>
 							</paper-material>
-						</section>
+							</section>
 
-						<section data-route="contact">
+							<section data-route="contact">
 							<paper-material elevation="1">
 								<contact-page></contact-page>
 							</paper-material>
