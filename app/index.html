@@ -155,10 +155,6 @@
 						<iron-icon icon="bookmark"></iron-icon>
 						<span>White List</span>
 					</a> -->
-					<a data-route="help" href="http://help.hi9.uk">
-						<iron-icon icon="help"></iron-icon>
-						<span>Help</span>
-					</a>
 
 					<template is="dom-if" if="{{roleIs('admin',role)}}">
 						<a data-route="stats" href="/stats">
@@ -177,7 +173,7 @@
 					<span class="flex"></span>
 
 					<!-- Toolbar icons -->
-                                        <hi9-login role="{{role}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+            <hi9-login role="{{role}}" main hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
 					<!-- Application name -->
 					<div class="middle middle-container center horizontal layout">
