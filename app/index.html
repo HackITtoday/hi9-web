@@ -213,11 +213,12 @@
 							<paper-material elevation="1">
                 <user-page user="{{user}}" >
                   <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+                  <firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
 							  </user-page>
 							</paper-material>
-							</section>
+						</section>
 
-							<section data-route="contact">
+						<section data-route="contact">
 							<paper-material elevation="1">
 								<contact-page></contact-page>
 							</paper-material>
