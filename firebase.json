@@ -1,5 +1,5 @@
 {
-  "firebase": "hi9site",
+  "firebase": "hi9-testing",
   "public": "dist",
   "ignore": [
     "firebase.json",
