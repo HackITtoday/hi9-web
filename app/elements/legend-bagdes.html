@@ -1,0 +1,30 @@
+  <dom-module id="legend-bagdes">
+    <template>
+      <div style="padding:1em">
+        <template is="dom-repeat" items="[[icons]]">
+          <iron-icon style="color:green" title="[[item.Title]]" icon="[[item.icon]]"></iron-icon> <span style="color:#999">[[item.text]]</span> <br/>
+        </template>
+      </div>
+    </template>
+  </dom-module>
+  <script>
+  (function () {
+    Polymer({
+      is: 'legend-bagdes',
+      properties: {
+        icons: {
+          type:Array,
+          value: [
+            {icon :"done",Title: "Done", text:"Logged in"},
+            {icon :"done-all",Title: "Title", text:"Active"},
+            {icon :"thumb-up",Title: "Title", text:"Facebooked"},
+            {icon :"work",Title: "Title", text:"Looked for work"},
+            {icon :"mail",Title: "Title", text:"Sent a email"},
+            {icon :"maps:local-library",Title: "Learning", text:"Use on-line learning tools"}
+          ]
+        }
+       }
+      
+    });
+  })();
+  </script>
