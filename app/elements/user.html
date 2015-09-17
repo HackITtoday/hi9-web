@@ -1,5 +1,4 @@
 <link rel="import" href="form-data.html">
-<link rel="import" href="firebase-data.html">
 
 <dom-module id="user-page">
   <template>
@@ -8,7 +7,6 @@
       <p> Hi <span>{{name}}</span>, Please Make Sure that you add the Hi9 Extension.  </p>
       <p> If not then <a href="https://chrome.google.com/webstore/detail/hi9/hcidobkpedoelpnebadegeppfccncdel?">click here</a> and Add the Extension to Chrome </p>
     </div>
-    <firebase-data data="{{data}}" uid="[[uid]]"></firebase-data>
     <form-data data="{{data}}"></form-data>
     <content></content>
   </template>
@@ -24,9 +22,6 @@
       },
       name: {
         computed: "get(user.google.displayName)"
-      },
-      uid: {
-        computed: "get(user.uid)"
       }
     },
     get: function(val) {
