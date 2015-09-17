@@ -13,8 +13,13 @@
       is: 'form-data',
       properties: {
         data:{ 
-          type:Object,  notify: true
+          type:Object,  notify: true, observer: '_dataChanged'
+        },
+      _dataChanged: function(data) {
+        if (!data) {
+          this.data = {};
         }
+      }
       }
     });
   })();
