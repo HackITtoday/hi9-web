@@ -1,24 +1,18 @@
-  <dom-module id="form-data">
-    <template>
+<dom-module id="form-data">
+  <template>
+    <paper-input value="{{data.email::input}}" ></paper-input>
+    <paper-input value="{{data.num::input}}" ></paper-input>
+    <paper-input value="{{data.owner::input}}" ></paper-input>
+  </template>
+</dom-module>
 
-      <paper-input value="{{data.email::input}}" ></paper-input>
-      <paper-input value="{{data.num::input}}" ></paper-input>
-      <paper-input value="{{data.owner::input}}" ></paper-input>
-
-    </template>
-  </dom-module>
 <script>
   (function () {
     Polymer({
       is: 'form-data',
       properties: {
         data:{ 
-          type:Object,  notify: true, observer: '_dataChanged'
-        }
-      },
-      _dataChanged: function(data) {
-        if (!data) {
-          this.data = {};
+          type:Object,  notify: true
         }
       }
     });
