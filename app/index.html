@@ -160,7 +160,7 @@
 						<span>Help</span>
 					</a>
 
-					<template is="dom-if" if="{{roleIs('admin',role)}}">
+					<template is="dom-if" if="{{admin}}">
 						<a data-route="stats" href="/stats">
 							<iron-icon icon="account-box"></iron-icon>
 							<span>User List</span>
@@ -177,7 +177,7 @@
 					<span class="flex"></span>
 
 					<!-- Toolbar icons -->
-          <hi9-login role="{{role}}" isAdmin="{{isAdmin}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+          <hi9-login role="{{role}}" isAdmin="{{admin}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
 					<!-- Application name -->
 					<div class="middle middle-container center horizontal layout">
@@ -212,7 +212,7 @@
 						<section data-route="user">
 							<paper-material elevation="1">
                 <user-page user="{{user}}" >
-                  <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+                  <hi9-login role="{{role}}" isAdmin="{{admin}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
                   <firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
 							  </user-page>
 							</paper-material>
@@ -230,7 +230,7 @@
 							</paper-material>
 						</section>
 
-						<template is="dom-if" if="{{roleIs('admin',role)}}">
+						<template is="dom-if" if="{{admin}}">
 							<section data-route="stats">
 								<paper-material elevation="1">
 									<list-users></list-users>
