@@ -156,10 +156,10 @@
 						<span>White List</span>
 					</a> -->
 
-					<template is="dom-if" if="{{roleIs('admin',role)}}">
+					<template is="dom-if" if="{{admin}}">
 						<a data-route="stats" href="/stats">
-							<iron-icon icon="bookmark"></iron-icon>
-							<span>Stats</span>
+							<iron-icon icon="account-box"></iron-icon>
+							<span>User List</span>
 						</a>
 					</template>
 				</paper-menu>
@@ -173,7 +173,11 @@
 					<span class="flex"></span>
 
 					<!-- Toolbar icons -->
+<<<<<<< HEAD
             <hi9-login role="{{role}}" main hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+=======
+          <hi9-login role="{{role}}" isAdmin="{{admin}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+>>>>>>> dev-green-badge
 
 					<!-- Application name -->
 					<div class="middle middle-container center horizontal layout">
@@ -207,13 +211,14 @@
 
 						<section data-route="user">
 							<paper-material elevation="1">
-                                                          <user-page user="{{user}}" >
-                                                            <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+                <user-page user="{{user}}" >
+                  <hi9-login role="{{role}}" isAdmin="{{admin}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+                  <firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
 							  </user-page>
 							</paper-material>
-							</section>
+						</section>
 
-							<section data-route="contact">
+						<section data-route="contact">
 							<paper-material elevation="1">
 								<contact-page></contact-page>
 							</paper-material>
@@ -225,13 +230,12 @@
 							</paper-material>
 						</section>
 
-						<template is="dom-if" if="{{roleIs('admin',role)}}">
 							<section data-route="stats">
 								<paper-material elevation="1">
-									<stats-page user="{{user}}"></stats-page>
+									<list-users></list-users>
 								</paper-material>
 							</section>
-						</template>
+							
 					</iron-pages>
 				</div>
 			</paper-header-panel>

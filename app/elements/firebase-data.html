@@ -12,7 +12,7 @@
       is: 'firebase-data',
       properties: {
         data:{ 
-          type: Object, notify: true
+          type: Object, notify: true, observer: '_dataChanged'
         },
         userUrl: {
           computed:"getUserDataUrl(uid)"
@@ -24,6 +24,11 @@
       },
       get(val){
         return val
+      },
+      _dataChanged: function(data) {
+        if (!data) {
+          this.data = {};
+        }
       }
     });
   })();

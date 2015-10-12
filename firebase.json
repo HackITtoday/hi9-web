@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "firebase": "HI9-TESTING",
+=======
+  "firebase": "hi9-testing",
+>>>>>>> dev-green-badge
   "public": "dist",
   "ignore": [
     "firebase.json",
