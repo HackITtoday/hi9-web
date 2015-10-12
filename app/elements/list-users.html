@@ -1,0 +1,31 @@
+<dom-module id="list-users">
+    <template>
+      <firebase-collection id="fire" data="{{a}}"
+                location="https://hi9site.firebaseio.com/your-user-list">
+      </firebase-collection>
+      <template is="dom-repeat" items="[[a]]">
+        <div style="display: block;text-transform: capitalize;margin-bottom: 3px;background: white;border: 1px solid #ddd; border-radius: 3px;padding: 6px 12px"><span>[[item.user.google.displayName]]</span> <user-bagdes class="horizontal end-justified layout"></user-bagdes></div>
+      </template>
+      <legend-bagdes icons="[[icons]]"></legend-bagdes>
+    </template>
+  </dom-module>
+  <script>
+  (function () {
+    Polymer({
+      is: 'list-users',
+        properties: {
+        icons: {
+          type:Array,
+          value: [
+            {icon :"done",Title: "Done", text:"Logged in"},
+            {icon :"done-all",Title: "Title", text:"Active"},
+            {icon :"thumb-up",Title: "Title", text:"Facebooked"},
+            {icon :"work",Title: "Title", text:"Looked for work"},
+            {icon :"mail",Title: "Title", text:"Sent a email"},
+            {icon :"maps:local-library",Title: "Learning", text:"Use on-line learning tools"}
+          ]
+        }
+       }
+    });
+  })();
+  </script>
